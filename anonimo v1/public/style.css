@@ -1,0 +1,32 @@
+:root {
+  --fundo: #eef1f5;
+  --papel: #ffffff;
+  --tinta: #1c2330;
+  --suave: #667085;
+  --linha: #d5dbe5;
+  --acento: #2b4bd6;
+  --erro: #b42318;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fundo: #12161e; --papel: #1b212d; --tinta: #e8ecf3; --suave: #98a2b3; --linha: #2c3445; --acento: #7d93ff; --erro: #f97066; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--tinta); font: 16px/1.55 Georgia, "Times New Roman", serif; }
+header, main { max-width: 640px; margin: 0 auto; padding: 0 16px; }
+header { display: flex; justify-content: space-between; align-items: baseline; padding-top: 32px; padding-bottom: 16px; }
+h1 { font-size: 1.9rem; margin: 0; letter-spacing: -.02em; }
+h2 { margin: 0 0 12px; font-size: 1.2rem; }
+#conta { font: .9rem system-ui, sans-serif; color: var(--suave); }
+form { background: var(--papel); border: 1px solid var(--linha); border-radius: 6px; padding: 16px; margin-bottom: 24px; display: grid; gap: 10px; }
+input, textarea { font: 1rem system-ui, sans-serif; color: inherit; background: var(--fundo); border: 1px solid var(--linha); border-radius: 4px; padding: 10px; width: 100%; }
+textarea { min-height: 96px; resize: vertical; }
+input:focus-visible, textarea:focus-visible, button:focus-visible { outline: 2px solid var(--acento); outline-offset: 2px; }
+button { font: 600 .95rem system-ui, sans-serif; background: var(--acento); color: #fff; border: 0; border-radius: 4px; padding: 10px 16px; cursor: pointer; justify-self: start; }
+@media (prefers-color-scheme: dark) { button { color: #12161e; } }
+button.link { background: none; color: var(--acento); padding: 0; text-decoration: underline; }
+.erro { color: var(--erro); font: .9rem system-ui, sans-serif; margin: 0; min-height: 1.2em; }
+.comentario { background: var(--papel); border-left: 3px solid var(--acento); padding: 12px 16px; margin-bottom: 12px; border-radius: 0 6px 6px 0; }
+.comentario p { margin: 0 0 6px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.meta { display: flex; gap: 12px; font: .8rem system-ui, sans-serif; color: var(--suave); }
+.meta button { background: none; color: var(--erro); padding: 0; font-weight: 400; text-decoration: underline; }
+.vazio { color: var(--suave); text-align: center; padding: 32px 0; }

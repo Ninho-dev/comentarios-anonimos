@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mural anônimo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Mural anônimo</h1>
+    <div id="conta"></div>
+  </header>
+
+  <main>
+    <section id="auth" hidden>
+      <form id="form-auth">
+        <h2 id="auth-titulo">Entrar</h2>
+        <input name="nome" placeholder="Nome de usuário" autocomplete="username" required>
+        <input name="senha" type="password" placeholder="Senha" autocomplete="current-password" required>
+        <p id="auth-erro" class="erro" role="alert"></p>
+        <button type="submit" id="auth-btn">Entrar</button>
+        <button type="button" id="auth-troca" class="link">Criar uma conta</button>
+      </form>
+    </section>
+
+    <section id="novo" hidden>
+      <form id="form-comentario">
+        <textarea name="texto" maxlength="500" placeholder="Escreva algo. Ninguém vai ver quem você é." required></textarea>
+        <button type="submit">Publicar</button>
+      </form>
+    </section>
+
+    <section id="lista" aria-live="polite"></section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
